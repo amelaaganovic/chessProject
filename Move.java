@@ -1,5 +1,5 @@
-package W19Project3GIVETOSTUDENTS;
-
+package Project3;
+// XUE : DO NOT TOUCH YOU ARE NOT ALLOWED TO EDIT THIS
 public class Move {
 	public int fromRow, fromColumn, toRow, toColumn;
 
@@ -18,6 +18,6 @@ public class Move {
 		return "Move [fromRow=" + fromRow + ", fromColumn=" + fromColumn + ", toRow=" + toRow + ", toColumn=" + toColumn
 				+ "]";
 	}
-	
-	
+
+
 }
