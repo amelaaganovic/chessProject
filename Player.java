@@ -1,5 +1,5 @@
-package W19Project3GIVETOSTUDENTS;
-
+package Project3;
+// AMELA: don't touch this class
 public enum Player {
 	BLACK, WHITE;
 

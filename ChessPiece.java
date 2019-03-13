@@ -1,4 +1,4 @@
-package W19Project3GIVETOSTUDENTS;
+package Project3;
 
 public abstract class ChessPiece implements IChessPiece {
 
@@ -15,13 +15,33 @@ public abstract class ChessPiece implements IChessPiece {
 	}
 
 	public boolean isValidMove(Move move, IChessPiece[][] board) {
+		//  XUE : ignore because it is inherited
+		// AMELA: updated after lecture
+
 		boolean valid = false;
 
-		//  THIS IS A START... More coding needed
-		
-		if (((move.fromRow == move.toRow) && (move.fromColumn == move.toColumn)) == false)
-			return valid;
+		// check if space exists
+		if (board[move.fromRow][move.fromColumn] != null)
+			//if (board[move.fromRow][move.fromColumn].isValidMove(move, board))
+				valid = true;
 
+		return valid;
+
+		// AMELA: need to figure out distinction between ChessPiece and ChessModel
+	}
+
+	// return true if boards are different
+	public boolean compareBoard(Move move) {
 		return false;
+	}
+
+	// AMELA:
+
+	public Player getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Player owner) {
+		this.owner = owner;
 	}
 }
