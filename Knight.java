@@ -1,21 +1,60 @@
-package W19Project3GIVETOSTUDENTS;
-
+package chess;
+/*****************************************************************
+ * A Knight piece in a chess game.
+ *
+ * @author Amela Aganovic
+ * @version Winter 2019
+ *****************************************************************/
 public class Knight extends ChessPiece {
 
+	// AMELA: I'll make the comments better later
+
+	/*****************************************************************
+	 * Constructor for the knight piece
+	 *
+	 * @param player the current player
+	 *****************************************************************/
 	public Knight(Player player) {
 		super(player);
 	}
 
+	/*****************************************************************
+	 * Returns the type of chess piece the piece is
+	 *
+	 * @return knight
+	 *****************************************************************/
 	public String type() {
 		return "Knight";
 	}
 
+	/*****************************************************************
+	 * Determining valid moves for the selected knight piece
+	 * @param move the move
+	 * @param board the chest board
+	 * @return true if move is valid
+	 *****************************************************************/
 	public boolean isValidMove(Move move, IChessPiece[][] board){
 
-		boolean valid = true;
-        // More code is needed
-		return valid;
-		
-	}
+		boolean valid = false;
 
+
+		System.out.println("... moving KNIGHT");
+
+		// MOVING TWO VERTICALLY ONE HORIZONTALLY
+		if (move.toColumn == move.fromColumn + 1 || move.toColumn == move.fromColumn - 1){
+			if (move.toRow == move.fromRow + 2 || move.toRow == move.fromRow - 2){
+				valid = true;
+				System.out.println("... SUCCESS");
+			}
+		}
+
+		// MOVING ONE VERTICALLY TWO HORIZONTALLY
+		if (move.toColumn == move.fromColumn + 2 || move.toColumn == move.fromColumn - 2){
+			if (move.toRow == move.fromRow + 1 || move.toRow == move.fromRow - 1){
+				valid = true;
+				System.out.println("... SUCCESS");
+			}
+		}
+		return valid;
+	}
 }
