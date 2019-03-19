@@ -1,27 +1,34 @@
-package W19Project3GIVETOSTUDENTS;
+package chess;
 
 public abstract class ChessPiece implements IChessPiece {
 
-	private Player owner;
+    private Player owner;
 
-	protected ChessPiece(Player player) {
-		this.owner = player;
-	}
+    protected ChessPiece(Player player) {
+        this.owner = player;
+    }
 
-	public abstract String type();
+    public abstract String type();
 
-	public Player player() {
-		return owner;
-	}
+    public Player player() {
+        return owner;
+    }
 
-	public boolean isValidMove(Move move, IChessPiece[][] board) {
-		boolean valid = false;
+    public boolean isValidMove(Move move, IChessPiece[][] board) {
+        // Check turn
+        if (move.toRow >= 8 || move.toColumn >= 8)
+            return false;
+        if (move.toRow == move.fromRow && move.toColumn == move.fromColumn)
+            return false;
+        if (board[move.toRow][move.toColumn] != null &&
+                !board[move.toRow][move.toColumn].player().equals(player().next()))
+            return false;
 
-		//  THIS IS A START... More coding needed
-		
-		if (((move.fromRow == move.toRow) && (move.fromColumn == move.toColumn)) == false)
-			return valid;
+        return true;
+    }
 
-		return false;
-	}
+    // return true if boards are different
+    public boolean compareBoard(Move move) {
+        return false;
+    }
 }
