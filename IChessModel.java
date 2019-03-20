@@ -1,5 +1,5 @@
-package W19Project3GIVETOSTUDENTS;
-
+package ChessVersion2;
+// XUE : DO NOT TOUCH YOU ARE NOT ALLOWED TO EDIT THIS
 public interface IChessModel {
 
 	/**
