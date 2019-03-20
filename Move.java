@@ -1,5 +1,5 @@
-package W19Project3GIVETOSTUDENTS;
-
+package chess;
+// XUE : DO NOT TOUCH YOU ARE NOT ALLOWED TO EDIT THIS
 public class Move {
 	public int fromRow, fromColumn, toRow, toColumn;
 
