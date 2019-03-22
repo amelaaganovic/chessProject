@@ -1,6 +1,6 @@
-package W19Project3GIVETOSTUDENTS;
+package ChessVersion4;
 
 public enum GUIcodes {
-	NoMessage, NotYourTurn, inCheck, Checkmate
+    NoMessage, NotYourTurn, inCheck, Checkmate
 
 }
